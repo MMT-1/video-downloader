@@ -1,0 +1,37 @@
+<div class="faqs-section">
+  <div class="container">
+    <h2 class="faqs-title text-center">Frequently Asked Questions</h2>
+    <div class="faqs-description text-center my-5">
+      Frequently asked questions about downloading videos from social networks.
+    </div>
+    <div class="accordion accordion-flush" id="faqs-accordion">
+      {% for faq in faqs %} 
+      <div class="accordion-item">
+        <h2 class="accordion-header mb-3" id="faq-heading-{{loop.index}}">
+          <button
+            class="accordion-button collapsed bg-success text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faq-collapse-{{loop.index}}"
+            aria-expanded="false"
+            aria-controls="faq-collapse-{{loop.index}}"
+          >
+            {{faq.question}}
+          </button>
+        </h2>
+        <div
+          id="faq-collapse-{{loop.index}}"
+          class="accordion-collapse collapse"
+          aria-labelledby="faq-heading-{{loop.index}}"
+          data-bs-parent="#faqs-accordion"
+        >
+          <div class="accordion-body">
+            {{faq.answer}}
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</div>

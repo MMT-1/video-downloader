@@ -1,0 +1,17 @@
+<div class="container text-center mt-5">
+  <h2>{{title}}</h2>
+  <div class="thumbnail-formats">
+    <img
+      src="{{thumbnail or 'https://www.fing.edu.uy/inco/grupos/gsi/img/placeholder.png'}}"
+      alt="Thumbnail"
+      class="thumbnail"
+    />
+    <div>
+      {% for format in formats %}
+      <a href="{{format.url}}" target="_blank" >
+        <button class="download-format-button">{{format.format_name}}</button>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

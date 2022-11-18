@@ -1,0 +1,27 @@
+<div class="features text-center my-5">
+  <div class="container">
+    <h2 class="features-title mb-5">AnyFast Online Video Downloader</h2>
+    <div>
+      Download all videos from the internet online with a high-quality MP4/MP3
+      in the GiveFastLink video downloader for 100% free, easy-to-use, and
+      unlimited.
+    </div>
+
+    <div class="feature-boxes my-5">
+      {% for feature in features %}
+      <div class="feature">
+        <div class="feature-image-container">
+          <img
+            class="feature-image"
+            src="{{feature.image}}
+              "
+            alt="Feature 1"
+          />
+        </div>
+        <div class="feature-title">{{feature.title}}</div>
+        <div class="feature-description">{{feature.description}}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
